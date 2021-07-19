@@ -19,13 +19,14 @@ namespace ConsoleApp1
 
         private static SymmetricAlgorithm _cryptoService = new TripleDESCryptoServiceProvider();
 
-        public string SymmetricEncript(string text, int userKey)
+        public void SymmetricEncript(string text, int userKey)
         {
 
             byte[] key = new byte[blockSize];
             rng.GetBytes(key);
             byte[] iv = new byte[blockSize];
             rng.GetBytes(iv);
+            Console.WriteLine();
 
         }
     }
